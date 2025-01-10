@@ -22,7 +22,7 @@ self.addEventListener('activate', (event) => {
 // Обработка share target
 self.addEventListener('fetch', async (event) => {
 
-  console.log(1111, event.request.method)
+  alert(event.request.method)
 
   if (event.request.method === 'POST' && event.request.url.includes('/share-target')) {
     // Предотвращаем дефолтную обработку
@@ -49,7 +49,7 @@ self.addEventListener('fetch', async (event) => {
           if (files.length > 0) {
             const file = files[0] as File;
 
-            console.log(2222, file)
+            alert(2222222222)
 
             client.postMessage({
               file: {
